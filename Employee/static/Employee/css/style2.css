@@ -1,0 +1,82 @@
+* 
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body 
+{
+    /* get out of the css folder and then go to image folder */
+    background : url("../image/ems2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-attachment: fixed;
+    color: whitesmoke;
+    font-family: 'Baloo Bhai', cursive;
+
+}
+
+.container
+{
+    /* border: 1px solid white ; */
+}
+
+form
+{
+    /* border: 3px solid red; */
+    width: 70%;
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    
+}
+
+
+#btn
+{
+    margin:auto;
+}
+div >input,div >textarea
+{
+
+    text-align: center;
+    border-radius: 3px;
+    font-family: 'Baloo Bhai', cursive;
+
+}
+
+/* button
+{
+
+    display: block;
+    width : 50%;
+    margin: auto;
+} */
+
+.table
+{
+
+    color: white;
+    margin-top: 20px;
+    background: sienna;
+}
+
+.table-bordered td, .table-bordered th {
+    border: 0px solid #dee2e6;
+}
+
+.table-wrap {
+    width: 90%;
+    height: 500px;
+    overflow-y: auto;
+    display: block;
+    margin: auto;
+    margin-top: 170px;
+  }
+
+
+  .nav
+  {
+      float: right;
+  }

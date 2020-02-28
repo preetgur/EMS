@@ -1,0 +1,103 @@
+{% extends 'Employee/basic.html'%}
+
+{% block links%}
+
+<span class="nav">
+<ul class="navbar-nav">
+
+    
+    <li class="nav-item">
+      <a class="nav-link text-primary" href="/show">Employee List</a>
+    </li>
+  </ul> 
+  </span>
+{% endblock %}
+
+{% block css%}
+
+.form-control
+{
+    display: block;
+    width: 50%;
+    margin: auto;
+}
+
+.btn-block {
+    display: block;
+    width: 50%;
+    margin: auto;
+}
+
+h3{
+  
+    width: 30%;
+    display: block;
+    margin: auto;
+}
+
+{% endblock %}
+
+{% block body %} 
+
+
+    <div class="container mt-5">
+  <h3>Update Employee Details</h3>
+  
+<form method="POST"  action="/update/{{employee.id}}">  
+        {% csrf_token %}  
+
+    <div class="form-group col-xs-4">
+
+     
+      <input type="text"  class="form-control" name="emp_id" id="id_emp_id" required maxlength="20" value="{{ employee.emp_id }}" placeholder ="Enter Employee Id"/>  
+
+    </div>
+
+    <div class="form-group">
+
+
+      <input type="text"  class="form-control" name="emp_fname" id="id_emp_fname" required maxlength="20" value="{{ employee.emp_fname }}"
+      placeholder ="Enter First Name"/>  
+      
+    </div>
+
+
+    <div class="form-group">
+
+   
+      <input type="text"  class="form-control" name="emp_lname" id="id_emp_lname" required maxlength="20" value="{{ employee.emp_lname }}"
+      placeholder ="Enter Last Name"/>  
+      
+    </div>
+
+
+    <div class="form-group">
+
+      <input type="email"  class="form-control" name="emp_email" id="id_emp_email" required maxlength="30" value="{{ employee.emp_email }}"
+      placeholder ="Enter Email"/>  
+      
+    </div>
+
+
+    <div class="form-group">
+      <input type="text"  class="form-control" name="emp_mobile" id="id_emp_mobile" required maxlength="10" minlength="9" value="{{ employee.emp_mobile }}"
+      placeholder ="Enter Mobile No"/>  
+      
+    </div>
+
+
+   <div class="form-group">
+
+      <textarea rows="5" class="form-control" name="emp_address" id="id_emp_address" required maxlength="200" placeholder ="Enter Address">
+      {{ employee.emp_address }}
+      </textarea>
+
+
+    
+    </div>
+  
+    <button type="submit" class="btn btn-success btn-block">Submit</button>
+  </form>
+</div>
+
+{% endblock %}
